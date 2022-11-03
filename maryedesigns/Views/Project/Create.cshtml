@@ -1,0 +1,39 @@
+﻿@model maryedesigns.ViewModel.ListOfProjectViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<h4>Project</h4>
+<h1>Create</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Create" asp-controller="Project" id="form-action" role="form">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectLink" class="control-label"></label>
+                <input asp-for="ProjectLink" class="form-control" />
+                <span asp-validation-for="ProjectLink" class="text-danger"></span>
+            </div>
+
+
+            <div class="row justify-content-center form-group">
+                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+                    <input type="submit" id="form-button" class="btn btn-success" value="Add Todo" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+    @*<a asp-action="Index">Back to List</a>*@
+</div>
